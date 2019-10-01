@@ -38,7 +38,7 @@ d3.csv('https://bcviscourse.github.io/lab4/data//wealth-health-2014.csv',
   
   let circlerad = d3.scaleLinear()
     .domain([d3.min(data, (d)=>d.Population),d3.max(data, (d)=>d.Population)])
-    .range([4, 30])
+    .range([2, 4.5])
 
   let incomeScale = d3.scaleLinear()
     .domain([incomeMin, incomeMax])
@@ -69,7 +69,7 @@ d3.csv('https://bcviscourse.github.io/lab4/data//wealth-health-2014.csv',
 
 	group.append('g')
 		.attr("class", "axis y-axis")
-		.attr('transform', 'translate (0,'+ -height/2- 50 + ')')
+		.attr('transform', `translate ${0},${height/2- 40})`)
     .call(yAxis);
     
   group.append("text")
