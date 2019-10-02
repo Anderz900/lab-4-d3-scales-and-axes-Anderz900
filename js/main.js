@@ -54,7 +54,7 @@ d3.csv('https://bcviscourse.github.io/lab4/data//wealth-health-2014.csv',
 
 	let yAxis = d3.axisLeft()
 		.scale(lifeScale)
-		.ticks(10)
+		.ticks(5)
 
   let colorScale = d3.scaleSequential(d3.interpolateBlues)
 	  .domain([incomeMin, incomeMax]);
@@ -80,8 +80,8 @@ d3.csv('https://bcviscourse.github.io/lab4/data//wealth-health-2014.csv',
   
   group.append("text")
     .attr("transform","rotate(-90)")
-    .attr("y", 0 - margin.left + 10)
-    .attr("x", 0 - (height/2))
+    .attr("y", 0 - margin.left + 20) 
+    .attr("x", 0 - (height/2) - 16)
     .style("text-anchor", "middle")
     .text("Life Expectancy");
 
